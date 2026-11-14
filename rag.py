@@ -33,7 +33,6 @@ for file in Path("docs").glob("*.md"):
     
 # Vectorizing the chunks list
 chunk_vectors = embed(chunks)
-print(f"Indexed {len(chunks)} chunks\n")
 
 # function to find similarity between the chunks returning the 3 closest chunks
 def retrieve(question, k=3):
