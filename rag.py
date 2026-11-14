@@ -50,4 +50,5 @@ while True:
     if the answer isn't in the context, say "I don't know".
     Context: {context}
     Question: {question}"""
+    print("\n" + ask_llm(prompt) + "\n")
     
