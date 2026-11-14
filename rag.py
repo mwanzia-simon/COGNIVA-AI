@@ -1,6 +1,6 @@
 import requests
 import numpy as np
-from pathlib import path
+from pathlib import Path
 
 OLLAMA = "http://localhost:11434"
 EMBED_MODEL = "nomic-embed-text"
@@ -23,3 +23,5 @@ def ask_llm(prompt):
         "messages":[{"role":"user","content":prompt}]
     })
     return r.json()["message"]["content"]
+
+print(ask_llm("What is the capital of kenya?"))
