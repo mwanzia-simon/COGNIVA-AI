@@ -24,4 +24,7 @@ def ask_llm(prompt):
     })
     return r.json()["message"]["content"]
 
-print(embed("What is the capital of kenya?"))
+
+chunks = []
+for file in Path("docs").glob("*.md"):
+    chunks += [p.strip() for p in file.read_text(encoding="utf-8").split("\n\n") if p.strip()]
