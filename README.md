@@ -4,6 +4,8 @@
 
 Cogniva AI is a locally running AI-powered knowledge assistant that uses **Retrieval-Augmented Generation (RAG)** to answer questions using information stored in custom documents.
 
+![banner_image](./assets/rag-system.png)
+
 Instead of relying entirely on an AI model's existing knowledge, Cogniva retrieves relevant information from a document knowledge base and uses it as context to generate accurate, relevant answers.
 
 ##  Project Goal
