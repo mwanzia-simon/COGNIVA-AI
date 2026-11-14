@@ -24,4 +24,4 @@ def ask_llm(prompt):
     })
     return r.json()["message"]["content"]
 
-print(ask_llm("What is the capital of kenya?"))
+print(embed("What is the capital of kenya?"))
