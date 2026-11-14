@@ -34,3 +34,9 @@ for file in Path("docs").glob("*.md"):
 # Vectorizing the chunks list
 chunk_vectors = embed(chunks)
 print(f"Indexed {len(chunks)} chunks\n")
+
+# function to find similarity between the chunks returning the 3 closest chunks
+def retrieve(question, k=3):
+    q = embed(question)
+    scores = chunk_vectors @ q / (np.linalg.norm(chunk_vectors,axis=1) * np.linalg.norm(q))
+    return [chunks[i] for i in np.argsort(scores)[::-1][:k]]
