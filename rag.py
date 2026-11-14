@@ -40,3 +40,14 @@ def retrieve(question, k=3):
     q = embed(question)
     scores = chunk_vectors @ q / (np.linalg.norm(chunk_vectors,axis=1) * np.linalg.norm(q))
     return [chunks[i] for i in np.argsort(scores)[::-1][:k]]
+
+# Giving the llm the context before answering the questions
+while True:
+    question = input("ASK: ")
+    context = "\n\n".join(retrieve(question))
+    prompt = f"""
+    Answer the question using ONLY the context below.
+    if the answer isn't in the context, say "I don't know".
+    Context: {context}
+    Question: {question}"""
+    
