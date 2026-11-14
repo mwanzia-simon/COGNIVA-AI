@@ -9,7 +9,10 @@ CHAT_MODEL = "qwen3:4b-instruct"
 
 # Function to embed text
 def embed(texts):
-    r = requests.post(f"{OLLAMA}/api/embed",json={"model":EMBED_MODEL,"input":texts})
+    r = requests.post(f"{OLLAMA}/api/embed",json={
+        "model":EMBED_MODEL,
+        "input":texts
+        })
     return np.array(r.json()["embeddings"])
 
 # Function to chat with llm
