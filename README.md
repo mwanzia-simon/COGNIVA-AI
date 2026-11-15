@@ -72,5 +72,3 @@ Cogniva AI is designed to run locally using Ollama, reducing dependence on exter
 
 Developed by **Simon Makau** under the technology brand **Unlisted Code Logic**.
 
-
-*Building intelligent systems, one concept at a time.*
