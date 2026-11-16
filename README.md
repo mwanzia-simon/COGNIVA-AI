@@ -62,7 +62,6 @@ This project is also a practical exploration of:
 - Cosine similarity.
 - Semantic search.
 - Local Large Language Models (LLMs).
-- AI application development.
 
 ##  Local AI Approach
 
